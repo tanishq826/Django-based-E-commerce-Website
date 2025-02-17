@@ -1,0 +1,69 @@
+{% extends "base.html" %}
+
+{% block Home %}Products{% endblock Home %}
+
+{% block body %}
+
+<style>
+
+    .grow{
+        animation: grow 4s infinite alternate;
+        
+    }
+
+    @keyframes grow{
+        0%{
+            transform: scale(1);
+
+        }
+        100%{
+            transform: scale(1.1);
+            
+        }
+    }
+
+
+
+    .fadein{
+        opacity: 0;
+        animation: fadein 1s forwards;
+    }
+
+    @keyframes fadein{
+        to{
+            opacity:1;
+
+        }
+    }
+  </style>
+
+
+<div class="bg-danger-subtle">
+<div class="container fadein ">
+    <h1 class=" text-center text-danger-emphasis mb-5">EMPORIUM'S PRODUCTS</h1>
+    <div class="d-flex justify-content-between align-items-center">
+        <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
+          {% for products in products %}
+          <div class="col mb-5">
+            <div class="card shadow-sm">
+              <img src="{{products.img}}" class="d-block w-100" alt="...">
+              <div class="card-body text-danger-emphasis">
+                <h4 class="text-danger-emphasis">{{ products.name }}</h4>
+                <div class="d-flex justify-content-between align-items-center"> 
+                  <h2 class="text-center text-danger-emphasis">₹ {{ products.price }}</h2>
+                  <h4 class="text-center text-danger-emphasis">{{products.category}}</h4>
+                  <div class="btn-group ">
+                     <a href="{% comment %}{% url 'add_to_cart' products.id %}{% endcomment %}" class="btn btn-warning" type="submit">Add to Cart</a> 
+                  </div>                            
+                </div>
+              </div>
+            </div>
+          </div>
+          {% endfor %}
+        </div>  
+    </div>
+</div>
+</div>
+
+
+{% endblock body %}

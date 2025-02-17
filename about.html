@@ -1,0 +1,53 @@
+{% extends "base.html" %}
+
+{% block Home %}About{% endblock Home %}
+
+{% block body %}
+
+<style>
+
+    .grow{
+        animation: grow 4s infinite alternate;
+        
+    }
+
+    @keyframes grow{
+        0%{
+            transform: scale(1);
+
+        }
+        100%{
+            transform: scale(1.1);
+            
+        }
+    }
+
+
+
+    .fadein{
+        opacity: 0;
+        animation: fadein 1s forwards;
+    }
+
+    @keyframes fadein{
+        to{
+            opacity:1;
+
+        }
+    }
+</style>
+<div class="container-fluid  px-0 fadein">
+    <img src="https://images.unsplash.com/photo-1733814511689-7b0e888b17d7?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" class="d-block w-100 mx-0" alt="...">
+</div>
+<div class="container fs-4 bg-success bg-opacity-10 fadein grow" style="text-shadow: -5px 5px 5px #946221 ">
+    <div class="carousel-caption mb-5 align="top" d-none d-xl-block">
+    <h1 class="mt-n4 text-light">About Us!</h1>
+    <p class="text-light">Welcome to <strong>Ice cream Emporium's</strong>, your one-stop destination for all things sweet, creamy, and indulgent! We are an online ice cream parlor dedicated to delivering happiness in every scoop, right to your doorstep. From classic flavors to innovative creations, we craft our ice creams using the finest ingredients and a passion for perfection.</p>
+    <br>
+    <p class="text-light"><strong>At Ice cream Emporium's</strong>, we believe dessert should be an experience—whether you're enjoying a cozy night in or celebrating life's special moments. Dive into our menu of handcrafted flavors, custom sundaes, and vegan-friendly options to discover your new favorites.</p>
+    <br>
+    <p class="text-light">Because life’s too short to skip dessert! 🍦✨</p>
+    
+</div>
+
+{% endblock body %}
