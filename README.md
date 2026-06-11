@@ -2,7 +2,7 @@
 
 **Data Engineer** · Faridabad, India · Open to remote roles worldwide
 
-🎓 B.E. Computer Engineering &nbsp;|&nbsp; 📊 PG Diploma in Big Data Analytics &nbsp;|&nbsp; ✅ Open to remote
+🎓 B.Tech. Computer Engineering &nbsp;|&nbsp; 📊 PG Diploma in Big Data Analytics &nbsp;|&nbsp; ✅ Open to remote
 
 ---
 
@@ -19,7 +19,7 @@ I care about code that's readable, pipelines that don't break silently, and docu
 ### 🗄️ PySpark × dbt End-to-End Data Engineering Pipeline
 A production-style data pipeline built entirely on Databricks. Raw data is ingested, processed with PySpark, transformed and tested with dbt, and served to downstream consumers. Covers medallion architecture (bronze → silver → gold), incremental models, and data quality checks.
 
-`PySpark` `dbt` `Databricks` `SQL` `Delta Lake`
+`PySpark` `dbt` `Databricks` `SQL` 
 
 ---
 
@@ -34,11 +34,11 @@ A computer vision model that classifies sign language gestures in real time. Bui
 
 | Area | Tools |
 |---|---|
-| Languages | Python · SQL · Bash |
-| Data Engineering | PySpark · dbt · Airflow · Hadoop |
+| Languages | Python · SQL |
+| Data Engineering | PySpark · dbt · Hadoop |
 | Platforms | Databricks · AWS S3 · PostgreSQL |
 | Analytics & Viz | Power BI · Tableau · Pandas |
-| Other | Django · Git · REST APIs |
+| Other | Django · Git |
 
 ---
 
