@@ -1,0 +1,143 @@
+{% extends "base.html" %}
+
+{% block Home %}Cart{% endblock Home %}
+
+{% block body %}
+
+<style>
+
+    .grow{
+        animation: grow 4s infinite alternate;
+        
+    }
+  
+    @keyframes grow{
+        0%{
+            transform: scale(1);
+  
+        }
+        100%{
+            transform: scale(1.1);
+            
+        }
+    }
+  
+  
+  
+    .fadein{
+        opacity: 0;
+        animation: fadein 1s forwards;
+    }
+  
+    @keyframes fadein{
+        to{
+            opacity:1;
+  
+        }
+    }
+  </style>
+  
+  <div class="container-fluid px-0 mb-0  fadein grow">
+    <img
+      src="https://images.unsplash.com/photo-1514953808247-5d4b1cc19835?q=80&w=1976&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" class="d-block w-100 mx-0" alt="...">
+  </div>
+<div class="container mb-5 fadein">
+<div class="carousel-caption mb-5 align="top" d-none d-xl-block">
+    <h1 class="text-center text-danger-emphasis">Cart</h1>
+    <section class="section-content padding-y bg">
+    <div class="container">
+    
+    <!-- ============================ COMPONENT 1 ================================= -->
+    
+    {% comment %} {% for item in cart_item %} {% endcomment %}
+    <div class="row">
+        <aside class="col-lg-9">
+    <div class="card">
+    <table class="table table-borderless table-shopping-cart">
+    <thead class="text-muted">
+    <tr class="small text-uppercase">
+      <th scope="col">Product</th>
+      <th scope="col" width="120">Quantity</th>
+      <th scope="col" width="120">Price</th>
+      <th scope="col" class="text-right" width="200"></th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+        <td>
+            <figure class="itemside align-items-center">
+                <div class="aside"><img src="https://lazza.co.in/admin/uploads/products/product-2982.svg" class="img-sm" width="150px" height="150px"></div>
+                <figcaption class="info">
+                    <a href="#" class="title text-dark">Big Mango Duble Easy Pack - 75ml</a>
+                    <p class="text-muted small">Category : Dubles</p>
+                </figcaption>
+            </figure>
+        </td>
+        <td> 
+            <!-- col.// -->
+                        <div class="col"> 
+                            <div class="input-group input-spinner">
+                                <div class="input-group-prepend">
+                                <button class="btn btn-light" type="button" id="button-plus"> <i class="fa fa-minus"></i> </button>
+                                </div>
+                                <input type="text" class="form-control"  value="1">
+                                <div class="input-group-append">
+                                <button class="btn btn-light" type="button" id="button-minus"> <i class="fa fa-plus"></i> </button>
+                                </div>
+                            </div> <!-- input-group.// -->
+                        </div> <!-- col.// -->
+        </td>
+        <td> 
+            <div class="price-wrap"> 
+                <var class="price">₹ 30</var> 
+                <br>
+                <small class="text-muted"> ₹ 30 each </small> 
+            </div> <!-- price-wrap .// -->
+        </td>
+        <td class="text-right"> 
+        <a href="" class="btn btn-danger"> Remove</a>
+        </td>
+    </tr>
+    </tbody>
+    </table>
+    </div> <!-- card.// -->
+    
+        </aside> <!-- col.// -->
+        <aside class="col-lg-3">
+    
+            <div class="card">
+            <div class="card-body">
+                <dl class="dlist-align">
+                  <dt>Total price:</dt>
+                  <dd class="text-right">₹ 30 </dd>
+                </dl>
+                <dl class="dlist-align">
+                  <dt>Tax:</dt>
+                  <dd class="text-right">₹ 0</dd>
+                </dl>
+                <dl class="dlist-align">
+                  <dt>Total:</dt>
+                  <dd class="text-right text-dark b"><strong>₹ 30</strong></dd>
+                </dl>
+                <hr>
+                <p class="text-center mb-3">
+                    <img src="" height="26">
+                </p>
+                <a href="" class="btn btn-primary btn-block"> Checkout </a>
+                <a href="" class="btn btn-light btn-block">Continue Shopping</a>
+            </div> <!-- card-body.// -->
+            </div> <!-- card.// -->
+    
+        </aside> <!-- col.// -->
+    
+    
+    {% comment %} {% endfor %} {% endcomment %}
+    </div> <!-- row.// -->
+    <!-- ============================ COMPONENT 1 END .// ================================= -->
+    
+    </div> <!-- container .//  -->
+    </section>
+</div>
+
+
+{% endblock body %}
