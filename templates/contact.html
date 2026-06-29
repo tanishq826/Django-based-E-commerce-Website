@@ -1,0 +1,69 @@
+{% extends "base.html" %}
+
+{% block Home %}Contact{% endblock Home %}
+
+{% block body %}
+
+<style>
+
+  .grow{
+      animation: grow 4s infinite alternate;
+      
+  }
+
+  @keyframes grow{
+      0%{
+          transform: scale(1);
+
+      }
+      100%{
+          transform: scale(1.1);
+          
+      }
+  }
+
+
+
+  .fadein{
+      opacity: 0;
+      animation: fadein 1s forwards;
+  }
+
+  @keyframes fadein{
+      to{
+          opacity:1;
+
+      }
+  }
+</style>
+
+<div class="container-fluid  px-0 fadein grow">
+  <img
+    src="https://images.unsplash.com/photo-1642761168053-1ddf252ad2c3?q=80&w=1925&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" class="d-block w-100 mx-0" alt="...">
+</div>
+<div class="container mb-5 fadein">
+  <div class="carousel-caption align="top" d-none d-xl-block">
+  <h1 class="text-center">Contact Us</h1>
+  <form method="post" action="/contact">
+  {% csrf_token %}
+    <div class="form-group mb-2">
+      <label for="name"></label>
+      <input type="text" class="form-control" id="name" name="name" placeholder="Enter Your Name">
+    </div>
+    <div class="form-group mb-2">
+      <label for="email"></label>
+      <input type="email" class="form-control" id="email" name="email" placeholder="Enter Your Email ID">
+    </div>
+    <div class="form-group mb-2">
+      <label for="phone"></label>
+      <input type="phone" class="form-control" id="phone" name="phone" placeholder="Enter Your Phone Number">
+    </div>
+    <div class="form-group mb-4">
+      <label for="desc"></label>
+      <textarea class="form-control" id="desc" rows="3" name="desc" placeholder="Reason For Contacting Us..."></textarea>
+    </div>
+    <button class="btn btn-success" type="submit">Submit</button>
+    </div>
+  </div>
+
+{% endblock body %}
